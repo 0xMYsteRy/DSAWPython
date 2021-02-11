@@ -1,0 +1,6 @@
+#Project output path
+/venv/
+
+#MacOS X
+/.idea/
+.DS_Store
