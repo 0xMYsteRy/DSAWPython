@@ -164,7 +164,7 @@ def client_handler(client_socket):
 
         # now we take these bytes and try to write them out
         try:
-            file_descriptor = open(upload_destination,"wb")
+            file_descriptor = open(upload_destination, "wb")
             file_descriptor.write(file_buffer.encode())
             file_descriptor.close()
 
@@ -173,7 +173,6 @@ def client_handler(client_socket):
 
         # check for command execution
         if len(execute):
-
             # run the command
             output = run_command(execute)
             client_socket.send(output)
@@ -194,11 +193,6 @@ def client_handler(client_socket):
 
                 # send back the response
                 client_socket.send(response)
-
-
-
-
-
 
 
 if __name__ == main():
